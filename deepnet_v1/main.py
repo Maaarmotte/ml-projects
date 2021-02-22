@@ -54,6 +54,6 @@ if __name__ == '__main__':
 
     # Plot the predicted data
     plt.scatter(Xtest[:,0], Xtest[:,1], c=P, cmap="tab10")
-    plt.scatter(Xwrong[:,0], Xwrong[:,1], s=150, c=Ywrong, cmap="tab10", marker="x", linewidths=2)
+    plt.scatter(Xwrong[:,0], Xwrong[:,1], s=150, c="red", marker="x", linewidths=2)
 
     plt.show()
