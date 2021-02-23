@@ -29,3 +29,12 @@ class TanH(ActivationFunction):
     @staticmethod
     def apply_derivative(Z):
         return 1 - Z*Z
+
+class ReLU(ActivationFunction):
+    @staticmethod
+    def apply(Z):
+        return np.maximum(0, Z)
+
+    @staticmethod
+    def apply_derivative(Z):
+        return np.sign(Z)

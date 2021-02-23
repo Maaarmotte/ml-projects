@@ -28,10 +28,14 @@ def classification_rate(Y, P):
 def shuffle(X, Y):
     idx = np.arange(len(Y))
     np.random.shuffle(idx)
-    return X[idx], Y[idx]
+    return X[idx,:], Y[idx]
 
 
 # Outputs trainX, trainY, testX, testY
 def train_test_split(X, Y, ratio=0.85):
     idx = int(ratio*len(Y))
     return X[:idx], Y[:idx], X[idx:], Y[idx:]
+
+
+def take_next_batch(X, Y, start, size=1):
+    return X[start:(start+size),:], Y[start:(start + size)]
